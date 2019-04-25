@@ -11,14 +11,14 @@ class Circle {
     y = y_;
     r = 1;
     
-    c = int(random(255));;
+    c = masterButton.col();
   }
 
   void show() {
     strokeWeight(0);
     stroke(255);
     colorMode(HSB);
-    fill(c,255,255);
+    fill(c);
 
     ellipse(x, y, r*2, r*2);
   }
