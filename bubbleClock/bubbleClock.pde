@@ -17,8 +17,10 @@ void setup() {
   colorMode(HSB);
 
   buttons.add(new BWButton(550, 650, 75, color(150)));
-  buttons.add(new RainButton(700, 650, 75, color(150, 255, 255)));
-  buttons.add(new RedButton(850, 650, 75, color(250, 240, 180)));
+  buttons.add(new RainButton(700, 650, 75, 0));
+  buttons.add(new RedButton(850, 650, 75, color(255, 255, 255)));
+  buttons.add(new BlueButton(1000, 650, 75, color(150, 255, 255)));
+  buttons.add(new GreenButton(1150, 650, 75, color(85, 255, 255)));
 
   masterButton = buttons.get(0);
 
@@ -98,7 +100,7 @@ void draw() {
       }
     }
 
-    //is it touching non-white? the laggiest part of the code i think 
+    //is it touching non-white?
     for (float a = 0; a < TWO_PI; a+=.1) {
       float x = c.r*cos(a);
       float y = c.r*sin(a);

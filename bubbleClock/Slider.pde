@@ -19,6 +19,8 @@ class Slider {
     stroke(255);
     strokeWeight(5);
     rect(x,y,w,h);
+    
+    fill(20);
     ellipse(cirX,y,h,h);
     textAlign(CENTER,CENTER);
     
