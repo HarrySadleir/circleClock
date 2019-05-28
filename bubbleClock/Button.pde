@@ -14,7 +14,11 @@ abstract class Button {
 
   void show() {
     fill(col);
-    stroke(255);
+    if (this.equals(masterButton)) {
+      stroke(100);
+    } else {
+      stroke(255);
+    }
     strokeWeight(5);
     ellipse(x, y, w, w); 
     noStroke();
@@ -37,11 +41,8 @@ class RainButton extends Button {
   } 
 
   void show() {
-    noFill();
-    stroke(255);
-    strokeWeight(5);
-    ellipse(x, y, w, w); 
-    noStroke();
+    super.show();
+
 
     int c = 255;
     float cons = PI/8;
@@ -96,5 +97,4 @@ class GreenButton extends Button {
   color col() {
     return color(random(80, 100), random(200, 255), random(200, 255));
   }
-  
 }
